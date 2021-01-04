@@ -1,0 +1,543 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'poppins';
+    
+}
+/***********************NavBar*********************/
+header{
+    width: 100%;
+    height: 10vh;
+    background:#35424A;  
+}
+
+.menu{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    float: right;
+    align-items: center; 
+    background: #35424A;
+    border-bottom: 4px solid #CB4824; 
+}
+
+ul { 
+    width: 30%;
+    height: 10vh;
+    margin-left: 10%;
+    display: flex ;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center; 
+}
+
+@media screen and (max-width: 650px){
+    ul{
+        display: none;
+    }
+
+    ul li a{
+        line-height: 2.6;
+    }
+}
+
+ul li{
+    list-style: none;
+    margin-left: 15%;
+}
+
+ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.2vw;
+    float: right;
+}
+
+@media screen and (max-width: 1100px){
+    ul li a{
+        font-size: 1.7vw;
+    }
+}
+
+@media screen and (max-width: 800px){
+    ul li a{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 650px){
+    ul li a{
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 470px){
+    ul li a{
+        font-size: 3.1vw;
+    }
+}
+
+ul li a:hover {
+    color:#E8491D;
+}
+ul li .active{
+    color:#E8491D;
+}
+
+@media screen and (max-width: 650px){
+    ul li a:hover {
+        color:#35424A;
+    }
+    ul li .active{
+        color:#35424A;
+    }
+}
+
+.logo{
+    width: 40%;
+    margin-left: 10%;
+}
+
+.logo span{
+    color:#E8491D;
+}
+
+.logo a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.8vw;
+}
+
+@media screen and (max-width: 1100px){
+    .logo a{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .logo a{
+        font-size: 2.4vw;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .logo a{
+        font-size: 2.9vw;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .logo a{
+        font-size: 3.4vw;
+    }
+}
+/* ****************** Burger Menu ******************* */
+
+.btn {
+    position: absolute;
+    right: 10%;
+    top: 4%;
+    display:none;
+}
+
+@media screen and (max-width: 650px){
+    .btn {
+        display:block;
+    }
+}
+
+.burger {
+    
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.close {
+    visibility: hidden;
+    position: absolute;
+    right: 2.5px;
+    cursor: pointer;
+
+
+}
+
+input[type=checkbox] {
+    display: none;
+
+}
+
+input[type=checkbox]:checked~ul {
+    position: absolute;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    margin-left: 0;
+    top:10%;
+    z-index: 111;
+    padding: 5% 0%;
+    justify-content: center;
+    background: rgba(232,73,23, .8);   
+}
+
+input[type=checkbox]:checked~ul li {
+    margin-left: 0;
+}
+
+input[type=checkbox]:checked~.btn .close {
+    visibility: visible;
+}
+
+input[type=checkbox]:checked~.btn .burger {
+    visibility: hidden;
+}
+/***********************HeaderHero*********************/
+.headerHero{
+    width: 100%;
+    height: 55vh; 
+    background-image: url('/img/background.jpg');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+@media screen and (max-width: 800px){
+    .headerHero{
+        height: 45vh; 
+    }
+}
+
+@media screen and (max-width: 650px){
+    .headerHero{
+        height: 40vh; 
+    }
+}
+
+.myBackground{
+    height: 100%;
+    background-color: rgba(134, 129, 129, 0.5);
+    text-align: center; 
+      
+}
+.textHeader{
+    width: 80%;
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+}
+
+@media screen and (max-width: 800px){
+    .textHeader{
+        top: 26%;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .textHeader{
+        top: 24%;
+    }
+}
+.textHeader h1{
+    font-size: 3vw;
+    line-height: 2.5;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 800px){
+    .textHeader h1{
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .textHeader h1{
+        font-size: 4.3vw;
+    }
+}
+
+
+.textHeader p{
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 800px){
+    .textHeader p{
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .textHeader p{
+        font-size: 2.8vw;
+    }
+}
+
+
+/***********************newsletter*********************/
+.newsletter{
+    width: 100%;
+    height: 12vh;
+    background: #35424A;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+@media screen and (max-width: 1099px){
+    .newsletter{
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+}
+
+.titleNewsletter{
+    width: 460px;
+    color:white;
+    margin-left: 10%;
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 1099px){
+    .titleNewsletter{
+        margin-left: 0;
+        text-align: center;
+        padding: 1%;
+        
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .titleNewsletter{
+        font-size: 1.3vw;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .titleNewsletter{
+        font-size: 2vw;
+        
+    }
+}
+
+@media screen and (max-width: 450px){
+    .titleNewsletter{
+        width: 300px;
+        
+    }
+}
+
+.titleNewsletter h1{
+    font-weight: 400;
+}
+
+.subscribe{
+    width: 420px;
+    display: flex;
+    margin-right: 10%;
+}
+
+@media screen and (max-width: 1099px){
+    .subscribe{
+        margin-right: 0;
+        margin-bottom: 1%;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .subscribe{
+        width: 360px;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .subscribe{
+        width: 270px;
+    }
+}
+
+.subscribe input{
+    width: 80%;
+    height: 5.2vh;
+    padding: 2%;
+}
+
+@media screen and (max-width: 470px){
+    .subscribe input{
+        height: 4.6vh;
+    }
+}
+
+.subscribe button{
+    width: 36%;
+    background: #E8491D;
+    color: white;
+    border: None;
+    margin-left: 1.5%;
+    cursor: pointer;
+}
+/* **********************les cartes*********************** */
+.lesCartes{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+.cart{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1%;
+    margin:2% auto;
+
+}
+.cart img{
+    width: 40%;
+}
+
+.cart h3{
+    line-height: 3;
+}
+/* ****************  footer ******************* */
+footer{
+    width: 100%;
+    height: 10vh;
+    background: #E8491D; 
+}
+
+.textFooter{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 15px; 
+    font-weight: 300; 
+}
+/* ***********************  About ********************** */
+.lesCartes2{
+    width: 80%;
+    margin: 0 auto;
+    padding:3% 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cartAbout{
+    width: 900px;
+    margin-bottom: 3%;
+}
+
+.cartAbout .bloc1{
+    margin-bottom: 2%;  
+}
+
+.cartAbout .bloc1 h2{
+    line-height: 3;
+}
+
+.cartAbout .bloc1 P{
+    line-height: 2;
+}
+
+.cartAbout .bloc2{
+    background: #35424A;
+    color: white;
+    padding:2%;
+}
+
+.cartAbout .bloc2 P{
+    line-height: 2;
+}
+
+.sideCart{
+    width: 500px;
+    height: 350px;
+    line-height: 2;
+    background: #35424A;
+    color: white;
+    padding:2%;
+
+}
+.sideCart h2{
+    line-height: 3;
+}
+/* ******************  Services ******************* */
+.lesCartes3{
+    width: 80%;
+    margin: 0 auto;
+    padding:3% 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cartService{
+    width: 900px;
+    margin-bottom: 3%;
+}
+
+.cartService h2{
+    margin-bottom: 3%;
+}
+.blocServ1{
+    margin-bottom: 1%;
+    padding: 2% 3%;
+    background: #E6E6E6;
+}
+
+.blocServ1 .price{
+    line-height: 3;
+}
+
+.sideCartheight{
+    height: 450px;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+}
+
+.email input{
+    height: 4vh;
+    padding: 2%;
+}
+
+.email textarea{
+    padding: 2%;
+}
+
+.email button{
+    margin-top: 4%;
+    height: 4vh;
+    width: 25%;
+    background:#E8491D;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+/* footer */
+
+@media screen and (max-width:320px){
+    .textFooter p{
+        font-size: 12px;
+    }
+}
+

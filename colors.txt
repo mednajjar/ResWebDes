@@ -1,0 +1,7 @@
+#nav-bar-background : #35424A
+#Border-botom : #CB4824
+#Button-color : #E8491D
+#menu-hover : #E8491D
+#Background-text-bloc : #35424A
+#Background-body : #F4F4F4
+#Background-cart(body-services) : #E6E6E6
